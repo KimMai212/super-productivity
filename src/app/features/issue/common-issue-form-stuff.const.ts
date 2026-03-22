@@ -81,16 +81,14 @@ export const ISSUE_PROVIDER_COMMON_FORM_FIELDS: LimitedFormlyFieldConfig<IssuePr
         'props.disabled': '!model.defaultProjectId',
       },
       props: {
-        // label: T.F.CALDAV.FORM.IS_AUTO_IMPORT_ISSUES,
-        label: 'Auto import to default project (requires default project)',
+        label: T.F.ISSUE.FORM.AUTO_ADD_TO_BACKLOG,
       },
     },
     {
       key: 'isAutoPoll',
       type: 'checkbox',
       props: {
-        // label: T.F.CALDAV.FORM.IS_AUTO_POLL,
-        label: 'Poll imported for changes and notify',
+        label: T.F.ISSUE.FORM.AUTO_POLL,
       },
     },
     {
@@ -102,12 +100,14 @@ export const ISSUE_PROVIDER_COMMON_FORM_FIELDS: LimitedFormlyFieldConfig<IssuePr
         'props.disabled': '!model.isAutoPoll && !model.isAutoAddToBacklog',
       },
       props: {
-        label: 'Polling trigger',
-        description:
-          'When to poll: only when the default project is open, or always in the background',
+        label: T.F.ISSUE.FORM.POLLING_MODE,
+        description: T.F.ISSUE.FORM.POLLING_MODE_DESCRIPTION,
         options: [
-          { value: 'whenProjectOpen', label: 'When project is open' },
-          { value: 'always', label: 'Always (in background)' },
+          {
+            value: 'whenProjectOpen',
+            label: T.F.ISSUE.FORM.POLLING_MODE_WHEN_PROJECT_OPEN,
+          },
+          { value: 'always', label: T.F.ISSUE.FORM.POLLING_MODE_ALWAYS },
         ],
       },
     },
