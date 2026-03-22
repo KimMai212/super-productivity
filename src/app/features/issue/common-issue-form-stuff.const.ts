@@ -93,5 +93,23 @@ export const ISSUE_PROVIDER_COMMON_FORM_FIELDS: LimitedFormlyFieldConfig<IssuePr
         label: 'Poll imported for changes and notify',
       },
     },
+    {
+      key: 'pollingMode',
+      type: 'select',
+      defaultValue: 'whenProjectOpen',
+      expressions: {
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        'props.disabled': '!model.isAutoPoll && !model.isAutoAddToBacklog',
+      },
+      props: {
+        label: 'Polling trigger',
+        description:
+          'When to poll: only when the default project is open, or always in the background',
+        options: [
+          { value: 'whenProjectOpen', label: 'When project is open' },
+          { value: 'always', label: 'Always (in background)' },
+        ],
+      },
+    },
     // ISSUE_PROVIDER_FF_LINE,
   ] as const;

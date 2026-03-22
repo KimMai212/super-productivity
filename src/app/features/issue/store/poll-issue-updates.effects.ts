@@ -12,7 +12,10 @@ import { Store } from '@ngrx/store';
 import { IssueProvider } from '../issue.model';
 import { selectEnabledIssueProviders } from './issue-provider.selectors';
 import { DELAY_BEFORE_ISSUE_POLLING, ICAL_TYPE } from '../issue.const';
-import { selectAllCalendarIssueTasks } from '../../tasks/store/task.selectors';
+import {
+  selectAllCalendarIssueTasks,
+  selectAllTasks,
+} from '../../tasks/store/task.selectors';
 import { IssueLog } from '../../../core/log';
 
 @Injectable()
@@ -81,8 +84,8 @@ export class PollIssueUpdatesEffects {
 
   /**
    * Gets tasks to refresh for a provider.
-   * For calendar (ICAL) providers, returns ALL calendar tasks across all projects
-   * since calendar events can be assigned to any project.
+   * For calendar (ICAL) providers or providers with pollingMode 'always',
+   * returns ALL matching tasks across all projects.
    * For other providers, returns only tasks in the current work context.
    */
   private _getTasksForProvider(provider: IssueProvider): Observable<Task[]> {
@@ -98,6 +101,16 @@ export class PollIssueUpdatesEffects {
               // Safety: ensure task has valid issueId to prevent errors in refreshIssueTasks
               !!task.issueId,
           ),
+        ),
+      );
+    }
+
+    if (provider.pollingMode === 'always') {
+      // Poll ALL tasks for this provider across all projects
+      return this._store.select(selectAllTasks).pipe(
+        first(),
+        map((tasks: Task[]) =>
+          tasks.filter((task) => task.issueProviderId === provider.id && !!task.issueId),
         ),
       );
     }
