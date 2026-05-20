@@ -916,38 +916,38 @@
       "START": "Arbeitsbeginn"
     },
     "SEARCH_BAR": {
-      "INFO": "Klicke auf das Listensymbol, um nach archivierten Aufgaben zu suchen",
+      "INFO": "Gib oben etwas ein, um nach Aufgaben zu suchen",
       "NO_RESULTS": "Keine Aufgaben gefunden, die deiner Suche entsprechen",
-      "PLACEHOLDER": "Suche nach Aufgabe oder Aufgabenbeschreibung"
+      "PLACEHOLDER": "Aufgabe oder Beschreibung eingeben…"
     },
     "SIMPLE_COUNTER": {
       "D_CONFIRM_REMOVE": {
         "MSG": "Durch Löschen eines einfachen Zählers werden auch alle darauf erfassten Daten gelöscht. Willst du wirklich fortfahren?",
-        "OK": "Tu es!"
+        "OK": "Löschen"
       },
       "D_EDIT": {
-        "CURRENT_STREAK": "Aktuelle Serie",
+        "CURRENT_STREAK": "Aktuelle Erfolgsserie",
         "DAILY_GOAL": "Tägliches Ziel",
         "DAYS": "Tage",
         "L_COUNTER": "Anzahl"
       },
       "FORM": {
         "ADD_NEW": "Füge einen einfachen Zähler hinzu",
-        "HELP": "Hier kannst du einfache Schaltflächen konfigurieren, die oben rechts angezeigt werden. Das können entweder Timer oder nur ein einfacher Zähler sein, der durch Klicken hochgezählt wird.",
+        "HELP": "Hier kannst du einfache Buttons konfigurieren, die oben rechts angezeigt werden. Das können entweder Timer oder nur ein einfacher Zähler sein, der durch Klicken hochgezählt wird.",
         "L_COUNTDOWN_DURATION": "Dauer des Countdowns",
-        "L_DAILY_GOAL": "Tägliches Ziel für eine Erfolgssträhne",
+        "L_DAILY_GOAL": "Tagesziel für einen Erfolg",
         "L_ICON": "Symbol",
-        "L_ICON_ON": "Symbol wenn aktiviert",
-        "L_IS_ENABLED": "aktiviert",
-        "L_IS_HIDE_BUTTON": "Symbolleisten-Schaltfläche ausblenden",
-        "L_STREAK_MODE": "Serien-Verfolgung",
+        "L_ICON_ON": "Symbol, wenn aktiviert",
+        "L_IS_ENABLED": "aktiv",
+        "L_IS_HIDE_BUTTON": "Button in Leiste ausblenden",
+        "L_STREAK_MODE": "Wochenserie für...",
         "L_STREAK_MODE_SPECIFIC_DAYS": "Bestimmte Wochentage",
         "L_STREAK_MODE_WEEKLY_FREQUENCY": "Wöchentliche Häufigkeit (z. B. 3 mal pro Woche)",
         "L_TITLE": "Titel",
         "L_TRACK_STREAKS": "Erfolgsserie",
         "L_TYPE": "Typ",
-        "L_WEEKDAYS": "Wochentage in Serie",
-        "L_WEEKLY_FREQUENCY": "Abschlüsse pro Woche",
+        "L_WEEKDAYS": "Wochentage für Serie",
+        "L_WEEKLY_FREQUENCY": "Erfolge pro Woche",
         "TITLE": "Einfache Zähler",
         "TYPE_CLICK_COUNTER": "Klick-Zähler",
         "TYPE_REPEATED_COUNTDOWN": "Wiederholter Countdown",
